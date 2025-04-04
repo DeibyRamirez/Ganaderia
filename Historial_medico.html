@@ -1,0 +1,11 @@
+<div id="historial-medico-container"></div>
+
+<script>
+    // Verificar si el script ya está cargado para evitar duplicados
+    if (!document.getElementById("script-historial-medico")) {
+        let script = document.createElement("script");
+        script.src = "scripts/J_Historial_medico.js";
+        script.id = "script-historial-medico";
+        document.body.appendChild(script);
+    }
+</script>

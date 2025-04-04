@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GanaSys</title>
+    <link rel="stylesheet" href="styles/Total.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="scripts/J_Sidebar.js"></script>
+</head>
+
+<body>
+
+    <!-- Barra lateral + barra superior unidas -->
+    <div class="navbar-sidebar">
+
+        <!-- Barra superior -->
+        <div class="top-navbar">
+            <span id="user-role">Rol: Administrador</span>
+            <span id="username">Usuario</span>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="toggleSidebar"><i class="fa-solid fa-horse-head logo-icon"></i></button>
+                <span class="sidebar-title">GanaSys</span>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="#" onclick="loadPage('index.html')"><i class="fa-solid fa-house"></i> <span
+                                class="menu-text">Inicio</span></a></li>
+                    <li><a href="#" onclick="loadPage('Ganado.html')"><i class="fa-solid fa-hat-cowboy"></i> <span
+                                class="menu-text">Gestión de Ganado</span></a></li>
+                    <li><a href="#" onclick="loadPage('Alimentacion.html')"><i class="fa-solid fa-utensils"></i> <span
+                                class="menu-text">Alimentación</span></a></li>
+                    <li><a href="#" onclick="loadPage('Historial_medico.html')"><i
+                                class="fa-solid fa-notes-medical"></i> <span class="menu-text">Historial
+                                Médico</span></a></li>
+                    <li><a href="#" onclick="loadPage('Produccion.html')"><i class="fa-solid fa-chart-line"></i> <span
+                                class="menu-text">Producción</span></a></li>
+                    <li><a href="#" onclick="loadPage('Ventas_Compras.html')"><i class="fa-solid fa-cart-shopping"></i>
+                            <span class="menu-text">Ventas y Compras</span></a></li>
+                    <li><a href="#" onclick="loadPage('Tratamientos_Reportes.html')"><i
+                                class="fa-solid fa-file-medical-alt"></i> <span class="menu-text">Tratamientos y
+                                Reportes</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- "Mi Perfil" al final -->
+            <div class="sidebar-footer">
+                <a href="#" onclick="loadPage('perfil.html')"><i class="fa-solid fa-user"></i> <span
+                        class="menu-text">Mi Perfil</span></a>
+            </div>
+        </aside>
+
+
+    </div>
+
+    <!-- Contenido principal -->
+    <main id="content">
+        <h2>Bienvenido a GanaSys</h2>
+        <p>Selecciona una opción en la barra lateral.</p>
+    </main>
+
+</body>
+
+</html>

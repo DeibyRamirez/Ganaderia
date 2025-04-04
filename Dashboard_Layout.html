@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="styles/Total.css">
+</head>
+<body>
+    <div id="dashboard-layout">
+        <nav class="sidebar">
+            <h2>Menú</h2>
+            <ul>
+                <li onclick="navigate('home')">Inicio</li>
+                <li onclick="navigate('ventas')">Ventas</li>
+                <li onclick="navigate('compras')">Compras</li>
+                <li onclick="navigate('reportes')">Reportes</li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header>
+                <h1>Panel de Control</h1>
+            </header>
+            <section id="page-content">
+                <p>Selecciona una opción del menú</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="scripts/J_Dashboard_Layout.js"></script>
+</body>
+</html>

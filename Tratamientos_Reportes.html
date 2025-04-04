@@ -1,0 +1,62 @@
+<div class="container">
+    <header>
+        <h1>Tratamientos y Reportes</h1>
+        <p>Gestione los tratamientos y genere reportes de su operación ganadera</p>
+        <button onclick="nuevoTratamiento()">Nuevo Tratamiento</button>
+    </header>
+
+    <section class="grid-container">
+        <div class="card">
+            <h2>Tratamientos Activos</h2>
+            <div id="tratamientos-activos">
+                <!-- Tratamientos Activos Dinámicos -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Reportes Disponibles</h2>
+            <div id="reportes-disponibles">
+                <div class="reporte">
+                    <h3>Producción Mensual</h3>
+                    <button onclick="descargarReporte('produccion')">Descargar</button>
+                </div>
+                <div class="reporte">
+                    <h3>Salud del Ganado</h3>
+                    <button onclick="descargarReporte('salud')">Descargar</button>
+                </div>
+                <div class="reporte">
+                    <h3>Finanzas</h3>
+                    <button onclick="descargarReporte('finanzas')">Descargar</button>
+                </div>
+                <div class="reporte">
+                    <h3>Inventario</h3>
+                    <button onclick="descargarReporte('inventario')">Descargar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Generar Reportes Personalizados</h2>
+        <div class="form-group">
+            <label for="tipoReporte">Tipo de Reporte</label>
+            <select id="tipoReporte">
+                <option value="produccion">Producción</option>
+                <option value="salud">Salud</option>
+                <option value="finanzas">Finanzas</option>
+                <option value="inventario">Inventario</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fechaInicio">Fecha Inicio</label>
+            <input type="date" id="fechaInicio">
+        </div>
+        <div class="form-group">
+            <label for="fechaFin">Fecha Fin</label>
+            <input type="date" id="fechaFin">
+        </div>
+        <button onclick="generarReporte()">Generar Reporte</button>
+    </section>
+</div>
+
+<script src="scripts/J_Tratamientos_R.js"></script>

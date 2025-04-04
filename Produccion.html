@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>Producción</h1>
+            <p>Gestione y consulte los registros de producción de leche y carne</p>
+        </div>
+        <a href="nuevo.html" class="button new-record">
+            <span class="icon">+</span> Nuevo Registro
+        </a>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Producción de Leche</h2>
+            <div class="card-image"></div>
+            <a href="leche.html" class="button">Ver todos los registros</a>
+        </div>
+        <div class="card">
+            <h2>Producción de Carne</h2>
+            <div class="card-image"></div>
+            <a href="carne.html" class="button">Ver todos los registros</a>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <h2>Registros Recientes</h2>
+        <p>Últimos registros de producción</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Animal/Grupo</th>
+                    <th>Cantidad</th>
+                    <th>Calidad</th>
+                    <th>Responsable</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="records">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script>
+    // Verificar si el script ya está cargado para evitar duplicados
+    if (!document.getElementById("script-produccion")) {
+        let script = document.createElement("script");
+        script.src = "scripts/J_Produccion.js";
+        script.id = "script-produccion";
+        document.body.appendChild(script);
+    }
+</script>

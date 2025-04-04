@@ -1,0 +1,53 @@
+<div class="container">
+    <header>
+        <h1>Alimentación</h1>
+        <p>Gestione los planes alimenticios y dietas para su ganado</p>
+        <button onclick="nuevoPlan()">Nuevo Plan</button>
+    </header>
+
+    <section class="planes">
+        <h2>Planes Alimenticios Activos</h2>
+        <div id="planes-activos"></div>
+    </section>
+
+    <section class="recomendaciones">
+        <h2>Recomendaciones Nutricionales</h2>
+        <div class="recomendacion">
+            <h3>Ganado Lechero</h3>
+            <ul>
+                <li>Proteína cruda: 16-18% de la materia seca</li>
+                <li>Fibra: 28-32% de la materia seca</li>
+                <li>Energía: 1.65-1.72 Mcal/kg</li>
+                <li>Minerales: Calcio, fósforo y magnesio</li>
+            </ul>
+        </div>
+        <div class="recomendacion">
+            <h3>Ganado de Engorde</h3>
+            <ul>
+                <li>Proteína cruda: 12-14% de la materia seca</li>
+                <li>Fibra: 20-25% de la materia seca</li>
+                <li>Energía: 2.0-2.2 Mcal/kg</li>
+                <li>Minerales: Calcio, fósforo y potasio</li>
+            </ul>
+        </div>
+        <div class="recomendacion">
+            <h3>Terneros</h3>
+            <ul>
+                <li>Proteína cruda: 18-22% de la materia seca</li>
+                <li>Fibra: 15-20% de la materia seca</li>
+                <li>Energía: 2.5-3.0 Mcal/kg</li>
+                <li>Minerales: Calcio, fósforo y zinc</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script>
+    // Verificar si el script ya está cargado para evitar duplicados
+    if (!document.getElementById("script-alimentacion")) {
+        let script = document.createElement("script");
+        script.src = "scripts/J_Alimentacion.js";
+        script.id = "script-alimentacion";
+        document.body.appendChild(script);
+    }
+</script>

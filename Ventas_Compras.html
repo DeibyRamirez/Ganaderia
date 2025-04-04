@@ -1,0 +1,45 @@
+<div class="container">
+    <header>
+        <h1>Ventas y Compras</h1>
+        <p>Gestione las transacciones comerciales de su operación ganadera</p>
+        <div class="actions">
+            <button onclick="nuevaVenta()">Nueva Venta</button>
+            <button onclick="nuevaCompra()">Nueva Compra</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="resumen">
+            <div class="tarjeta">
+                <h2>Resumen de Ventas</h2>
+                <div class="grafico"></div>
+                <button onclick="verVentas()">Ver todas las ventas</button>
+            </div>
+            <div class="tarjeta">
+                <h2>Resumen de Compras</h2>
+                <div class="grafico"></div>
+                <button onclick="verCompras()">Ver todas las compras</button>
+            </div>
+        </section>
+
+        <section class="transacciones">
+            <h2>Transacciones Recientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Cliente/Proveedor</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="transacciones-body"></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="scripts/J_Ventas_Compras.js"></script>

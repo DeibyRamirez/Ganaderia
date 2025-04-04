@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="header">
+        <h1>Gestión de Ganado</h1>
+        <p>Administre su inventario de ganado, registre nuevos animales y consulte información detallada.</p>
+        <button onclick="nuevoAnimal()">
+            <span>+</span> Nuevo Animal
+        </button>
+    </div>
+
+    <div class="table-container">
+        <h2>Inventario de Ganado</h2>
+        <p>Lista completa de animales registrados en el sistema</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre/Código</th>
+                    <th>Raza</th>
+                    <th>Sexo</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Peso (kg)</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaGanado"></tbody>
+        </table>
+
+        <div class="pagination">
+            <span>Mostrando 5 de 24 registros</span>
+            <button disabled>Anterior</button>
+            <button onclick="paginaSiguiente()">Siguiente</button>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/J_Ganado.js"></script>
