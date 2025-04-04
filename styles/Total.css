@@ -1,4 +1,4 @@
-/* RESET GENERAL */
+/* ===================== RESET GENERAL ===================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +6,24 @@
     font-family: Arial, sans-serif;
 }
 
-/* ESTILOS GENERALES */
+/* ===================== ESTILOS GENERALES ===================== */
 body {
-    background-color: #f4f4f4;
+    background-color: #f1f1f1; /* Gris claro para fondo general */
     padding: 20px;
 }
 
+/* Contenedor general con bordes definidos y sin sombra */
 .container {
-    width: 950%;
+    width: 95%;
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
+    border: 1px solid #ddd; /* Borde en lugar de sombra */
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ENCABEZADO */
+/* ===================== ENCABEZADO ===================== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -39,20 +40,21 @@ body {
     color: #666;
 }
 
-/* BOTONES */
+/* ===================== BOTONES ===================== */
 button, .button {
     padding: 10px 15px;
-    background-color: #4caf50;
+    background-color: #4caf50; /* Verde principal */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button:hover, .button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Verde más oscuro en hover */
 }
 
 button:disabled {
@@ -61,13 +63,13 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* TABLAS */
+/* ===================== TABLAS ===================== */
 .table-container {
     margin-top: 20px;
     background-color: #fff;
     padding: 15px;
+    border: 1px solid #ccc; /* Borde definido */
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
@@ -90,7 +92,7 @@ tr:hover {
     background-color: #f9f9f9;
 }
 
-/* ESTADOS */
+/* ===================== ESTADOS ===================== */
 .status {
     padding: 4px 8px;
     border-radius: 5px;
@@ -102,7 +104,7 @@ tr:hover {
     color: #388e3c;
 }
 
-/* FORMULARIOS */
+/* ===================== FORMULARIOS ===================== */
 label {
     display: block;
     margin: 8px 0 4px;
@@ -116,16 +118,90 @@ input, select, textarea {
     border: 1px solid #ccc;
 }
 
-/* SECCIÓN HISTORIAL MÉDICO */
-.actions button {
-    background-color: #1976d2;
+/* ===================== HISTORIAL MÉDICO ===================== */
+#historial-medico-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Eliminada la sombra */
+    border-radius: 8px;
 }
 
-.actions button:hover {
-    background-color: #1565c0;
+/* ===================== PLANES ALIMENTICIOS ===================== */
+.planes {
+    margin-top: 20px;
 }
 
-/* SECCIÓN PRODUCCIÓN */
+.planes h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#planes-activos {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc; /* Definición clara */
+    border-radius: 5px;
+}
+
+/* ===================== RECOMENDACIONES ===================== */
+.recomendaciones {
+    margin: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recomendacion {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.recomendacion h3 {
+    font-size: 18px;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.recomendacion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recomendacion ul li {
+    padding: 5px 0;
+    color: #555;
+}
+
+/* ===================== BOTÓN AGREGAR PLAN ===================== */
+.add-food-button {
+    padding: 10px 15px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.add-food-button:hover {
+    background-color: #e68900;
+}
+
+/* ===================== SECCIÓN PRODUCCIÓN (CARDS) ===================== */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -137,7 +213,7 @@ input, select, textarea {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc; /* Quitamos sombra y añadimos borde */
 }
 
 .card-image {
@@ -147,11 +223,11 @@ input, select, textarea {
     margin-bottom: 10px;
 }
 
-/* NAVBAR + SIDEBAR UNIFICADOS */
+/* ===================== NAVBAR SUPERIOR ===================== */
 .top-navbar {
     width: 100%;
     height: 50px;
-    background-color: #333; /* Color gris oscuro */
+    background-color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,19 +241,43 @@ input, select, textarea {
     z-index: 1000;
 }
 
-/* SIDEBAR */
+/* ===================== SIDEBAR ===================== */
+
+.info-section {
+    background-color: #fff;
+    border-left: 4px solid #2E7D32;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-section h3 {
+    color: #2E7D32;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-section p {
+    margin: 0;
+    line-height: 1.6;
+}
+
 .sidebar {
     width: 220px;
     height: 100vh;
     position: fixed;
-    top: 0;  /* Alineado con la barra superior */
+    top: 0;
     left: 0;
-    background-color: #333; /* Color gris oscuro */
+    background-color: #333;
     color: white;
-    padding: 8px;
+    padding-top: 70px; /* Espacio para navbar */
     display: flex;
     flex-direction: column;
-    padding-top: 70px; /* Para que no choque con la navbar */
+    transition: width 0.3s;
 }
 
 .sidebar h2 {
@@ -226,58 +326,72 @@ input, select, textarea {
     margin-right: 0;
 }
 
-/* Ajustar el contenido principal según el ancho de la sidebar */
+.sidebar-menu ul li a {
+    color: white; /* Color normal */
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-menu ul li a.active {
+    background-color: green; /* Fondo verde para la opción activa */
+    color: white !important; /* Texto en blanco */
+    font-weight: bold;
+}
+
+/* ===================== CONTENIDO PRINCIPAL ===================== */
 #content {
     margin-left: 220px;
     padding: 20px;
     transition: margin-left 0.3s ease;
-    margin-top: 50px; /* Para que no se solape con la navbar */
+    margin-top: 50px;
 }
 
 .sidebar.collapsed ~ #content {
     margin-left: 60px;
 }
 
-/* Icono del caballo */
+/* ===================== ICONOS Y TÍTULOS ===================== */
 .logo-icon {
     font-size: 20px;
     margin-left: 10px;
 }
 
-/* Título GanaSys */
 .sidebar-title {
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
 }
 
-/* Menú de navegación lateral */
+/* ===================== PIE DE SIDEBAR ===================== */
 .sidebar-menu {
     flex-grow: 1;
 }
 
-/* Mover "Mi Perfil" más abajo */
 .sidebar-footer {
     margin-top: auto;
     padding: 10px;
     text-align: center;
 }
+
 .sidebar-footer a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
+
 .sidebar-footer a i {
     margin-right: 5px;
 }
 
-/* HISTORIAL MÉDICO */
-#historial-medico-container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+/* ===================== BOTONES SECUNDARIOS ===================== */
+.actions button {
+    background-color: #1976d2;
+}
+
+.actions button:hover {
+    background-color: #1565c0;
 }

@@ -3,6 +3,7 @@ document.getElementById('tratamientos-activos').innerHTML = `
     ${[1, 2, 3].map(i => `
         <div class="reporte">
             <h3>Tratamiento #${i}</h3>
+            <br>
             <p>Animal: GAN-${1000 + i} • Inicio: 05/0${i}/2023</p>
             <button onclick="verDetalles(${i})">Ver detalles</button>
         </div>

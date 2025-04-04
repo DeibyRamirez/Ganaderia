@@ -1,66 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="styles/Total.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Dashboard</h1>
-            <p>Bienvenido al sistema de gestión ganadera. Aquí puede ver un resumen de su operación.</p>
-        </header>
+<div class="container">
 
-        <div class="stat-cards">
-            <div class="stat-card">
-                <div class="icon cow"></div>
-                <div class="info">
-                    <h2>Total de Ganado</h2>
-                    <p>124</p>
-                    <span>Cabezas de ganado activas</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon milk"></div>
-                <div class="info">
-                    <h2>Producción de Leche</h2>
-                    <p>1,284 L</p>
-                    <span>Producción diaria</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon sales"></div>
-                <div class="info">
-                    <h2>Ventas Mensuales</h2>
-                    <p>$24,500</p>
-                    <span>Ingresos del mes actual</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon performance"></div>
-                <div class="info">
-                    <h2>Rendimiento</h2>
-                    <p>87%</p>
-                    <span>Eficiencia operativa</span>
-                </div>
+    <h1>Dashboard</h1>
+    <br>
+    <p>Bienvenido al sistema de gestión ganadera. Aquí puede ver un resumen de su operación.</p>
+    <br>
+    <div class="grid">
+        <div class="card dashboard">
+            <div class="card-image cow"></div>
+            <div class="info">
+                <h2>Total de Ganado</h2>
+                <p>124</p>
+                <span>Cabezas de ganado activas</span>
             </div>
         </div>
-
-        <div class="main-content">
-            <div class="recent-production">
-                <h2>Producción Reciente</h2>
-                <div class="chart-placeholder">Gráfica de Producción</div>
+        <div class="card dashboard">
+            <div class="card-image milk"></div>
+            <div class="info">
+                <h2>Producción de Leche</h2>
+                <p>1,284 L</p>
+                <span>Producción diaria</span>
             </div>
-
-            <div class="pending-tasks">
-                <h2>Actividades Pendientes</h2>
-                <div id="task-list"></div>
+        </div>
+        <div class="card dashboard">
+            <div class="card-image sales"></div>
+            <div class="info">
+                <h2>Ventas Mensuales</h2>
+                <p>$24,500</p>
+                <span>Ingresos del mes actual</span>
+            </div>
+        </div>
+        <div class="card dashboard">
+            <div class="card-image performance"></div>
+            <div class="info">
+                <h2>Rendimiento</h2>
+                <p>87%</p>
+                <span>Eficiencia operativa</span>
             </div>
         </div>
     </div>
 
-    <script src="scripts/J_Dashboard.js"></script>
-</body>
-</html>
+    <div class="grid">
+        <div class="card">
+            <h2>Producción Reciente</h2>
+            <div class="card-image">Gráfica de Producción</div>
+        </div>
+
+        <div class="card">
+            <h2>Actividades Pendientes</h2>
+            <div id="task-list"></div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/J_Dashboard.js"></script>

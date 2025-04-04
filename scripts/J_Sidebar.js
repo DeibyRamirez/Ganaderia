@@ -12,16 +12,28 @@ function loadPage(page) {
                 document.body.appendChild(newScript);
             }
 
-            // Verificar si initGanado existe y ejecutarlo
+            // Resaltar la opción activa en el sidebar
+            document.querySelectorAll(".sidebar-menu ul li a").forEach(link => {
+                link.classList.remove("active"); // Quitar clase activa de todos
+                if (link.getAttribute("onclick").includes(page)) {
+                    link.classList.add("active"); // Agregar clase activa al seleccionado
+                }
+            });
+
+            // Ejecutar funciones específicas si existen
             setTimeout(() => {
                 if (typeof initGanado === "function") {
                     initGanado();
+                }
+                if (typeof initHistorialMedico === "function") {
+                    initHistorialMedico();
                 }
             }, 500);
         })
         .catch(error => console.log("Error al cargar la página:", error));
 }
 
+// Funcionalidad de colapsar el sidebar
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebar = document.getElementById('sidebar');
@@ -41,5 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             content.style.marginLeft = '200px'; // Sidebar expandido
         }
+
+        // Guardar estado en LocalStorage para que persista después de recargar la página
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
     });
+
+    // Restaurar el estado del sidebar al cargar la página
+    if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        sidebar.classList.add('collapsed');
+        content.style.marginLeft = '40px';
+    }
 });

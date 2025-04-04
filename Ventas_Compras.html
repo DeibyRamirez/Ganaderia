@@ -1,43 +1,55 @@
 <div class="container">
     <header>
         <h1>Ventas y Compras</h1>
+        <br>
         <p>Gestione las transacciones comerciales de su operación ganadera</p>
+        <br>
         <div class="actions">
             <button onclick="nuevaVenta()">Nueva Venta</button>
             <button onclick="nuevaCompra()">Nueva Compra</button>
         </div>
+        <br>
     </header>
 
     <main>
         <section class="resumen">
-            <div class="tarjeta">
+            <div class="card">
                 <h2>Resumen de Ventas</h2>
+                <div class="card-image"></div>
                 <div class="grafico"></div>
                 <button onclick="verVentas()">Ver todas las ventas</button>
             </div>
-            <div class="tarjeta">
+            <br>
+            <div class="card">
                 <h2>Resumen de Compras</h2>
+                <div class="card-image"></div>
                 <div class="grafico"></div>
                 <button onclick="verCompras()">Ver todas las compras</button>
             </div>
+            <br>
         </section>
 
-        <section class="transacciones">
-            <h2>Transacciones Recientes</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Tipo</th>
-                        <th>Descripción</th>
-                        <th>Cliente/Proveedor</th>
-                        <th>Monto</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="transacciones-body"></tbody>
-            </table>
+        <section class="transacciones"><br>
+            <div class="card">
+                <h2>Transacciones Recientes</h2>
+                <br>
+
+                <p>Últimas ventas y compras registradas</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Cliente/Proveedor</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transacciones-body"></tbody>
+                </table>
+            </div>
         </section>
     </main>
 </div>
